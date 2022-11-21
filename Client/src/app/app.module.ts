@@ -16,9 +16,10 @@ import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import { FilterNotesComponent } from './components/filter-notes/filter-notes.component';
 
 @NgModule({
-  declarations: [AppComponent, FilterPipe, AddNoteComponent, NoteItemComponent, NotesComponent],
+  declarations: [AppComponent, FilterPipe, AddNoteComponent, NoteItemComponent, NotesComponent, FilterNotesComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

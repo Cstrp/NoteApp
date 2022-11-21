@@ -1,5 +1,10 @@
 <div>
   <mat-toolbar>Notes App</mat-toolbar>
   <app-add-note (addNote)="addNote($event)"></app-add-note>
-  <app-note-item *ngFor="let note of notes" [note]="note" (removeNote)="removeNote($event)"></app-note-item>
+  <app-note-item
+    *ngFor="let note of notes | filter: getFilterByInputValue()"
+    [note]="note"
+    (removeNote)="removeNote($event)"
+  ></app-note-item>
+  <app-filter-notes (inputValue)="filterValue($event)"></app-filter-notes>
 </div>
