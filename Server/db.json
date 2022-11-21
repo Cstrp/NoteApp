@@ -3,27 +3,32 @@
     {
       "id": "0",
       "text": "run run run",
-      "tag": "#zero"
+      "tag": "#zero",
+      "completed": false
     },
     {
       "id": "1",
-      "text": "one",
-      "tag": "#one"
+      "text": "run boy run",
+      "tag": "#one",
+      "completed": false
     },
     {
       "id": "2",
-      "text": "two",
-      "tag": "#two"
+      "text": "boy",
+      "tag": "#two",
+      "completed": false
     },
     {
       "id": "3",
-      "text": "three",
-      "tag": "#three"
+      "text": "move button",
+      "tag": "#three",
+      "completed": false
     },
     {
       "id": "4",
-      "text": "four",
-      "tag": "#four"
+      "text": "create awsm app",
+      "tag": "#four",
+      "completed": true
     }
   ]
 }
