@@ -2,28 +2,28 @@
   "notes": [
     {
       "id": "0",
-      "content": "Zero",
-      "tags": "#zero"
+      "text": "run run run",
+      "tag": "#zero"
     },
     {
       "id": "1",
-      "content": "one",
-      "tags": "#one"
+      "text": "one",
+      "tag": "#one"
     },
     {
       "id": "2",
-      "content": "two",
-      "tags": "#two"
+      "text": "two",
+      "tag": "#two"
     },
     {
       "id": "3",
-      "content": "three",
-      "tags": "#three"
+      "text": "three",
+      "tag": "#three"
     },
     {
       "id": "4",
-      "content": "four",
-      "tags": "#four"
+      "text": "four",
+      "tag": "#four"
     }
   ]
 }

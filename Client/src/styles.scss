@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  --text-color: #eee;
+  --bkg-color: rgb(0, 0, 0);
+  --btn-txt-color: rgb(46, 43, 43);
+  --btn-bg-color: rgb(20, 211, 195);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background: var(--bkg-color);
+}
+
+p,
+span,
+mat-icon,
+div,
+input {
+  color: var(--text-color);
+}
+
+h1,
+p {
+  color: var(--text-color);
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  color: var(--bkg-color);
+  background: transparent;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 3px solid aqua;
+  padding: 20px;
+}

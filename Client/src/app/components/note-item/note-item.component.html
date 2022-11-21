@@ -1,0 +1,33 @@
+<mat-card class="card">
+  <mat-list role="list">
+    <mat-toolbar color="primary" class="note_item">
+      <mat-toolbar-row>
+        <div style="display: flex; flex-direction: column; gap: 5px">
+          <span class="note_list_text" [ngClass]="{complete: note.completed}" *ngIf="note.text; else noNotes">
+            {{ note.text | lowercase }}
+          </span>
+
+          <span *ngIf="note.tag; else noTags">{{ note.tag }}</span>
+          <ng-template #noNotes>
+            <p>
+              Notes ran out :(
+              <mat-icon>Error</mat-icon>
+            </p>
+          </ng-template>
+
+          <ng-template #noTags>
+            <span> Tags not found!!! </span>
+          </ng-template>
+        </div>
+
+        <span class="spacer"></span>
+
+        <mat-icon *ngIf="!note.completed" (click)="complete(note)">check</mat-icon>
+        <mat-icon *ngIf="note.completed" (click)="complete(note)">undo</mat-icon>
+
+        <mat-icon>edit</mat-icon>
+        <mat-icon (click)="rmNote(note)">delete</mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </mat-list>
+</mat-card>

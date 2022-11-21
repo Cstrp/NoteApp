@@ -1,0 +1,5 @@
+<div>
+  <mat-toolbar>Notes App</mat-toolbar>
+  <app-add-note (addNote)="addNote($event)"></app-add-note>
+  <app-note-item *ngFor="let note of notes" [note]="note" (removeNote)="removeNote($event)"></app-note-item>
+</div>

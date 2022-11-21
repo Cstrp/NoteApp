@@ -1,0 +1,13 @@
+.complete {
+  text-decoration: line-through #d50000;
+}
+
+.note_item {
+  margin: 5px 0;
+  color: #000000;
+  text-overflow: ellipsis;
+}
+
+mat-icon {
+  cursor: pointer;
+}

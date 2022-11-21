@@ -1,0 +1,45 @@
+<form class="input-group" [formGroup]="form" (keydown.enter)="saveNote(); form.reset()">
+  <div>
+    <mat-form-field style="width: 80%; margin-left: 100px">
+      <input
+        matInput
+        type="text"
+        name="task"
+        formControlName="text"
+        class="form-control"
+        placeholder="Enter text here..."
+        [(ngModel)]="text"
+      />
+    </mat-form-field>
+    <span class="spacer"></span>
+    <button type="button" (click)="saveNote(); form.reset()" *ngIf="!edit">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button *ngIf="edit">
+      <mat-icon>save</mat-icon>
+    </button>
+
+    <div *ngIf="control['text'].touched && control['text'].invalid" style="margin-left: 100px">
+      <div *ngIf="control['text'].errors?.['required']">Cannot be empty!</div>
+    </div>
+  </div>
+
+  <div>
+    <mat-form-field style="width: 80%; margin-left: 100px">
+      <input matInput formControlName="tag" />
+
+      <div *ngIf="control['tag'].touched && control['tag'].invalid">
+        <span *ngIf="control['tag'].errors?.['required']">Wow is empty!</span>
+        <span *ngIf="control['tag'].errors?.['pattern']">Symbol # (hash) is missing</span>
+      </div>
+    </mat-form-field>
+    <button type="button" (click)="saveNote(); form.reset()" *ngIf="!edit">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button *ngIf="edit">
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+</form>
+
+<!--click here to edit-->
