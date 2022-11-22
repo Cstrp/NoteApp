@@ -1,21 +1,21 @@
-<form class="input-group" [formGroup]="form" (keydown.enter)="saveNote(); form.reset()">
+<form class="input-group" [formGroup]="form">
   <div>
     <mat-form-field style="width: 80%; margin-left: 100px">
       <input
         matInput
         type="text"
         name="task"
+        [(ngModel)]="server.inputEditValue.text"
+        [value]="server.inputEditValue.text"
         formControlName="text"
-        class="form-control"
         placeholder="Enter text here..."
-        [(ngModel)]="text"
       />
     </mat-form-field>
     <span class="spacer"></span>
-    <button type="button" (click)="saveNote(); form.reset()" *ngIf="!edit">
+    <button type="button" (click)="saveNote(); form.reset()" *ngIf="!server.edit">
       <mat-icon>add</mat-icon>
     </button>
-    <button *ngIf="edit">
+    <button (click)="updateNote(); form.reset()" *ngIf="server.edit">
       <mat-icon>save</mat-icon>
     </button>
 
@@ -26,20 +26,28 @@
 
   <div>
     <mat-form-field style="width: 80%; margin-left: 100px">
-      <input matInput formControlName="tag" />
-
-      <div *ngIf="control['tag'].touched && control['tag'].invalid">
-        <span *ngIf="control['tag'].errors?.['required']" class="alert">Wow is empty!</span>
-        <span *ngIf="control['tag'].errors?.['pattern']" class="alert">Symbol # (hash) is missing</span>
-      </div>
+      <input
+        matInput
+        type="text"
+        formControlName="tag"
+        [(ngModel)]="server.inputEditValue.tag"
+        [value]="server.inputEditValue.tag"
+        placeholder="#Enter tags here..."
+      />
     </mat-form-field>
-    <button type="button" (click)="saveNote(); form.reset()" *ngIf="!edit">
+    <span class="spacer"></span>
+    <button type="button" (click)="saveNote(); form.reset()" [disabled]="form.invalid" *ngIf="!server.edit">
       <mat-icon>add</mat-icon>
     </button>
-    <button *ngIf="edit">
+    <button type="button" (click)="updateNote(); form.reset()" *ngIf="server.edit">
       <mat-icon>save</mat-icon>
     </button>
-  </div>
-</form>
 
-<!--click here to edit-->
+    <div *ngIf="control['tag'].touched && control['tag'].invalid" style="margin-left: 100px">
+      <span *ngIf="control['tag'].errors?.['required']" class="alert">Wow is empty!</span>
+      <span *ngIf="control['tag'].errors?.['pattern']" class="alert">Symbol # (hash) is missing</span>
+    </div>
+  </div>
+
+     <p>{{server.inputEditValue | json}}</p>
+</form>

@@ -16,7 +16,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
-import { FilterNotesComponent } from './components/filter-notes/filter-notes.component';
+import {FilterNotesComponent} from './components/filter-notes/filter-notes.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent, FilterPipe, AddNoteComponent, NoteItemComponent, NotesComponent, FilterNotesComponent],
@@ -33,6 +34,7 @@ import { FilterNotesComponent } from './components/filter-notes/filter-notes.com
     MatCardModule,
     MatListModule,
     ReactiveFormsModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

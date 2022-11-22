@@ -17,12 +17,22 @@ export class NotesComponent implements OnInit {
   }
 
   public addNote(note: Note) {
-    this.server.addNote(note).subscribe((notes) => this.notes.push(note));
+    this.server.addNote(note).subscribe(() => this.notes.push(note));
+    this.server.openSnackBar('Added Successfully!', 'Dismiss');
+  }
+
+  public updNote(note: Note) {
+    const idx = this.notes.findIndex((i) => i.id === note.id);
+    this.notes[idx] = note;
+    this.server.updateNote(note);
+
+    console.log(note);
   }
 
   public removeNote(note: Note) {
     this.notes = this.notes.filter((i) => i.id !== note.id);
     this.server.removeNote(note).subscribe();
+    this.server.openSnackBar('Item Deleted!', 'Dismiss');
   }
 
   public filterValue(evt: Event) {

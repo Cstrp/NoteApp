@@ -1,11 +1,25 @@
-.complete {
-  text-decoration: line-through #d50000;
-}
-
 .note_item {
-  margin: 5px 0;
   color: #000000;
   text-overflow: ellipsis;
+  margin: 5px 0;
+
+  .complete {
+    text-decoration: line-through #d50000;
+  }
+
+  .tag {
+    color: cadetblue;
+    padding: 0 10px 0 10px;
+    border: 1px solid saddlebrown;
+    border-radius: 3px;
+    transition: 0.3s all;
+
+    &:hover {
+      background: cornflowerblue;
+      color: black;
+      cursor: pointer;
+    }
+  }
 }
 
 mat-icon {

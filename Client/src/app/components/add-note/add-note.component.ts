@@ -1,6 +1,10 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Note} from '../../models/note';
 import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {ServerService} from '../../services/server.service';
+
+type GenerateId = () => string;
+export const generateId: GenerateId = () => Math.random().toString(16).slice(2) + new Date().getTime().toString(36);
 
 @Component({
   selector: 'app-add-note',
@@ -10,7 +14,7 @@ import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '
 export class AddNoteComponent implements OnInit {
   @Output() addNote: EventEmitter<Note> = new EventEmitter<Note>();
 
-  public text: string = '';
+  @Output() updNote: EventEmitter<Note> = new EventEmitter<Note>();
 
   public edit: boolean = false;
 
@@ -24,7 +28,9 @@ export class AddNoteComponent implements OnInit {
     return this.form.controls;
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, public server: ServerService) {
+    this.server.edit = this.edit;
+  }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -36,5 +42,10 @@ export class AddNoteComponent implements OnInit {
 
   saveNote() {
     this.addNote.emit(this.form.value);
+  }
+
+  updateNote() {
+    this.server.edit = true;
+    this.updNote.emit(this.form.value);
   }
 }

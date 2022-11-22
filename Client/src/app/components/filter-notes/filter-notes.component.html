@@ -1,5 +1,13 @@
-<form>
-  <mat-form-field style="width: 80%; margin: 50px 0 0 100px">
-    <input matInput placeholder="Filter by tag..." (input)="inputValue.emit($event)" />
-  </mat-form-field>
+<form [formGroup]="form">
+  <div>
+    <mat-form-field style="width: 80%; margin-top: 20px; margin-left: 100px">
+      <input matInput placeholder="Filter by tag..." formControlName="query" (input)="inputValue.emit($event)" />
+    </mat-form-field>
+    <span class="spacer"></span>
+    <div *ngIf="control['query'].touched && control['query'].invalid" style="margin-left: 100px">
+      <span *ngIf="control['query'].errors?.['required']" class="alert">Field is empty!</span>
+      <span *ngIf="control['query'].errors?.['pattern']" class="alert">Symbol # (hash) is missing</span>
+    </div>
+  </div>
 </form>
+

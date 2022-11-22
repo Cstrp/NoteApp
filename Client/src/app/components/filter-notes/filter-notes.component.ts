@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
+import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-filter-notes',
@@ -8,7 +9,19 @@ import {Component, EventEmitter, Output} from '@angular/core';
 export class FilterNotesComponent {
   @Output() inputValue = new EventEmitter();
 
-  constructor() {}
+  form: FormGroup = new FormGroup({
+    query: new FormControl(''),
+  });
 
-  ngOnInit(): void {}
+  get control(): {[key: string]: AbstractControl} {
+    return this.form.controls;
+  }
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.form = this.fb.group({
+      query: ['', [Validators.required, Validators.pattern(/^#\\w+$/gm)]],
+    });
+  }
 }

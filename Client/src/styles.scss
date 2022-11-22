@@ -1,29 +1,7 @@
-html,
-body {
-  height: 100%;
-  --text-color: #eee;
-  --bkg-color: rgb(0, 0, 0);
-  --btn-txt-color: rgb(46, 43, 43);
-  --btn-bg-color: rgb(20, 211, 195);
-}
 
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
-  background: var(--bkg-color);
-}
-
-p,
-span,
-mat-icon,
-div,
-input {
-  color: var(--text-color);
-}
-
-h1,
-p {
-  color: var(--text-color);
 }
 
 button {
@@ -41,8 +19,7 @@ button {
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 50px;
+  padding: 1rem;
   border-radius: 10px;
   border: 3px solid aqua;
-  padding: 20px;
 }

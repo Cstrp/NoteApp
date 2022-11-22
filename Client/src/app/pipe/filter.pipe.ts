@@ -6,7 +6,7 @@ import {Note} from '../models/note';
   pure: true,
 })
 export class FilterPipe implements PipeTransform {
-  transform(items: Note[], query: string) {
+  transform(items: Note[], query: string | any) {
     if (items && query) {
       items = items.filter((value: Note) => {
         if (value.tag) {

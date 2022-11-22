@@ -1,34 +1,51 @@
 {
   "notes": [
     {
-      "id": "0",
-      "text": "run run run",
-      "tag": "#zero",
-      "completed": false
-    },
-    {
-      "id": "1",
       "text": "run boy run",
       "tag": "#one",
-      "completed": false
+      "id": "1"
     },
     {
-      "id": "2",
       "text": "boy",
       "tag": "#two",
-      "completed": false
+      "id": "2"
     },
     {
-      "id": "3",
       "text": "move button",
       "tag": "#three",
+      "id": "3"
+    },
+    {
+      "text": "create awsm app",
+      "tag": "#four",
+      "id": "4"
+    },
+    {
+      "text": "this not notes",
+      "tag": "#five",
+      "id": "5"
+    },
+    {
+      "text": "count cat's",
+      "tag": "#six",
+      "id": "6"
+    },
+    {
+      "id": "7",
+      "text": "write app idea's",
+      "tag": "#seven",
       "completed": false
     },
     {
-      "id": "4",
-      "text": "create awsm app",
-      "tag": "#four",
+      "text": "find a job",
+      "tag": "#eight",
+      "id": "8",
       "completed": true
+    },
+    {
+      "text": "need idea...",
+      "tag": "#nine",
+      "id": "9"
     }
   ]
 }

@@ -1,6 +1,6 @@
 export interface Note {
-  id?: number;
+  id?: string;
   text: string;
-  completed: boolean;
-  tag?: string;
+  completed?: boolean;
+  tag: string;
 }
