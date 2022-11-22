@@ -1,12 +1,21 @@
 <mat-toolbar>
   <span>Note app</span>
 </mat-toolbar>
+
 <app-add-note (addNote)="addNote($event)" (updNote)="updNote($event)"></app-add-note>
-<app-note-item
-  *ngFor="let note of notes | filter: getFilterByInputValue(); let idx = index"
-  [note]="note"
-  [idx]="idx"
-  (removeNote)="removeNote($event)"
-  (updateNote)="updNote(note)"
-></app-note-item>
+
+<div *ngIf="notes.length; else empty">
+  <app-note-item
+    *ngFor="let note of notes | filter: getFilterByInputValue(); let idx = index"
+    [note]="note"
+    [idx]="idx"
+    (removeNote)="removeNote($event)"
+    (updateNote)="updNote(note)"
+  ></app-note-item>
+</div>
+
+<ng-template #empty>
+  <app-not-found></app-not-found>
+</ng-template>
+
 <app-filter-notes (inputValue)="filterValue($event)"></app-filter-notes>

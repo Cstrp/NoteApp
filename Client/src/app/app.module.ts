@@ -18,9 +18,10 @@ import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {FilterNotesComponent} from './components/filter-notes/filter-notes.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, FilterPipe, AddNoteComponent, NoteItemComponent, NotesComponent, FilterNotesComponent],
+  declarations: [AppComponent, FilterPipe, AddNoteComponent, NoteItemComponent, NotesComponent, FilterNotesComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
