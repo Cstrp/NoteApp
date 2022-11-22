@@ -4,7 +4,7 @@
       <mat-toolbar-row>
         <div style="display: flex; flex-direction: column; gap: 5px">
           <span class="note_list_text" [ngClass]="{complete: note.completed}" *ngIf="note.text; else noNotes">
-            {{ note.text | lowercase }}
+            {{ note.text | lowercase }} <i style="color: cadetblue">{{ note.tag | lowercase }}</i>
           </span>
 
           <span *ngIf="note.tag; else noTags" class="tag">{{ note.tag }}</span>
