@@ -46,6 +46,7 @@ export class AddNoteComponent implements OnInit {
 
   updateNote() {
     this.server.edit = true;
-    this.updNote.emit(this.form.value);
+    const {text, tag, id} = this.form.value;
+    this.updNote.emit({text: text, tag: tag, id: this.server.id});
   }
 }

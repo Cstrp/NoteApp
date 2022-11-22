@@ -24,9 +24,8 @@ export class NotesComponent implements OnInit {
   public updNote(note: Note) {
     const idx = this.notes.findIndex((i) => i.id === note.id);
     this.notes[idx] = note;
-    this.server.updateNote(note);
-
-    console.log(note);
+    this.server.upd(note).subscribe();
+    this.server.openSnackBar('Update Successfully!', 'Dismiss');
   }
 
   public removeNote(note: Note) {

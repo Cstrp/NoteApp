@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f96747b-85ac-4e49-9ea8-45779c6f52ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/components/add-note/add-note.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/add-note/add-note.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/components/add-note/add-note.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/add-note/add-note.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/components/add-note/add-note.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/add-note/add-note.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/components/filter-notes/filter-notes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/filter-notes/filter-notes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/components/filter-notes/filter-notes.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/filter-notes/filter-notes.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/components/filter-notes/filter-notes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/filter-notes/filter-notes.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/components/note-item/note-item.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/note-item/note-item.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/components/note-item/note-item.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/note-item/note-item.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/components/note-item/note-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/note-item/note-item.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/components/notes/notes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/notes/notes.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/components/notes/notes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/components/notes/notes.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/models/note.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/models/note.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/pipe/filter.pipe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/pipe/filter.pipe.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/services/server.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/services/server.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/db.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +113,7 @@
       <workItem from="1669032138973" duration="6135000" />
       <workItem from="1669041042457" duration="12845000" />
       <workItem from="1669053999615" duration="14609000" />
-      <workItem from="1669102016101" duration="12845000" />
+      <workItem from="1669102016101" duration="15030000" />
     </task>
     <servers />
   </component>

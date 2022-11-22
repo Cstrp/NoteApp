@@ -18,6 +18,8 @@ export class ServerService {
     text: '',
   };
 
+  public id: string = '';
+
   public edit: boolean = false;
 
   constructor(private http: HttpClient, public snackBar: MatSnackBar) {}
@@ -36,19 +38,13 @@ export class ServerService {
       .pipe(catchError((err) => throwError(err)));
   }
 
-  public updateNote(note: Note): Observable<Note> {
-    this.edit = true;
-    this.inputEditValue = {
-      text: note.text,
-      tag: note.tag,
-    };
-
-    return this.http
-      .put<Note>(this.url + `/${note.id}`, this.inputEditValue, {headers: headers})
-      .pipe(catchError((err) => throwError(err)));
+  public upd(note: Note) {
+    if (note.id) this.id = note.id;
+    return this.http.put<Note>(this.url + `/${note.id}`, note, {headers: headers});
   }
 
   public removeNote(note: Note): Observable<Note> {
+    if (note.id) this.id = note.id;
     return this.http
       .delete<Note>(this.url + `/${note.id}`, {headers: headers})
       .pipe(catchError((err) => throwError(err)));

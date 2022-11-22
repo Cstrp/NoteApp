@@ -3,8 +3,9 @@
 </mat-toolbar>
 <app-add-note (addNote)="addNote($event)" (updNote)="updNote($event)"></app-add-note>
 <app-note-item
-  *ngFor="let note of notes | filter: getFilterByInputValue()"
+  *ngFor="let note of notes | filter: getFilterByInputValue(); let idx = index"
   [note]="note"
+  [idx]="idx"
   (removeNote)="removeNote($event)"
   (updateNote)="updNote(note)"
 ></app-note-item>

@@ -10,6 +10,8 @@ import {ServerService} from '../../services/server.service';
 export class NoteItemComponent implements OnInit {
   @Input() note: Note = {} as Note;
 
+  @Input() idx!: number;
+
   @Output() removeNote: EventEmitter<Note> = new EventEmitter<Note>();
 
   @Output() updateNote: EventEmitter<Note> = new EventEmitter<Note>();
@@ -30,8 +32,12 @@ export class NoteItemComponent implements OnInit {
   }
 
   updNote(note: Note) {
-    console.log(note);
-    this.server.updateNote(note).subscribe();
+    this.server.inputEditValue = {
+      tag: note.tag,
+      text: note.text,
+    };
+    this.server.edit = true;
+    this.server.upd(note).subscribe();
   }
 
   rmNote(note: Note) {
